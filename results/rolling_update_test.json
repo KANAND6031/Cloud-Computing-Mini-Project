@@ -1,0 +1,28 @@
+{
+  "total_requests": 104,
+  "total_failures": 1,
+  "failure_rate_percent": 0.96,
+  "v2_rollout_status": "Waiting for deployment \"inference-service\" rollout to finish: 0 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"inference-service\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"inference-service\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"inference-service\" successfully rolled out",
+  "rollback_status": "Waiting for deployment \"inference-service\" rollout to finish: 0 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"inference-service\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"inference-service\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"inference-service\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"inference-service\" successfully rolled out",
+  "active_model_version_after_rollback": "v1",
+  "served_by_headers": {
+    "per_replica": {
+      "inference-service-5c7c4ffbdf-t8z9d": 10,
+      "inference-service-5c7c4ffbdf-bngl7": 7,
+      "inference-service-5fb58c5ccf-mhkmz": 15,
+      "inference-service-5fb58c5ccf-qgzwr": 16,
+      "inference-service-5c7c4ffbdf-cm7tw": 30,
+      "inference-service-5c7c4ffbdf-96bm8": 26
+    },
+    "per_model_version": {
+      "v1": 73,
+      "v2": 31
+    }
+  },
+  "timestamps": {
+    "v2_update_triggered": 15.0,
+    "v2_rollout_completed": 30.7,
+    "undo_triggered": 45.7,
+    "undo_completed": 61.8
+  }
+}

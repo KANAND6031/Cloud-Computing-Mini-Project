@@ -237,12 +237,17 @@ def validate_output(raw_str: str) -> tuple[bool, Optional[Dict[str, Any]]]:
     if not isinstance(obj, dict):
         return False, None
 
-    # Exactly four keys
-    if set(obj.keys()) != {"intent", "date", "time", "place"}:
+    # Must contain valid intent
+    if "intent" not in obj or obj.get("intent") not in VALID_INTENTS:
         return False, None
 
-    # Valid intent
-    if obj.get("intent") not in VALID_INTENTS:
+    # Per Rule 3 of schema.json, if the command/model does not mention a slot, it is null
+    for slot in ("date", "time", "place"):
+        if slot not in obj:
+            obj[slot] = None
+
+    # Exactly four keys
+    if set(obj.keys()) != {"intent", "date", "time", "place"}:
         return False, None
 
     # Slots must be string or None

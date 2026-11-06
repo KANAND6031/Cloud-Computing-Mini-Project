@@ -1,0 +1,9 @@
+{
+  "per_replica": {
+    "inference-service-79f84ddc69-69b5r": 25,
+    "inference-service-79f84ddc69-7928h": 14
+  },
+  "per_model_version": {
+    "v1": 39
+  }
+}

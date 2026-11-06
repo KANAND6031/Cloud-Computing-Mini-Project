@@ -1,0 +1,225 @@
+{
+  "success": true,
+  "scaled_up_to_2": true,
+  "scaled_up_at_sec": 20.3,
+  "scaled_down_to_1": true,
+  "scaled_down_at_sec": 129.1,
+  "timeline": [
+    {
+      "elapsed_sec": 0.0,
+      "phase": "start_idle",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     117s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 0.4,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     117s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 3.7,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     2m1s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 7.0,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     2m4s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 10.4,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     2m7s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 13.7,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     2m11s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 17.0,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     1     2m14s",
+      "pod_count": 1
+    },
+    {
+      "elapsed_sec": 20.3,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 292%/70%   1     2     1     2m17s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 23.6,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 292%/70%   1     2     1     2m21s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 27.0,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 292%/70%   1     2     1     2m24s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 30.3,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 292%/70%   1     2     1     2m27s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 33.9,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 398%/70%   1     2     2     2m31s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 37.2,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 398%/70%   1     2     2     2m34s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 40.5,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 398%/70%   1     2     2     2m37s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 43.8,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 398%/70%   1     2     2     2m41s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 47.1,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 398%/70%   1     2     2     2m44s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 50.5,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 393%/70%   1     2     2     2m47s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 53.9,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 393%/70%   1     2     2     2m51s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 57.2,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 393%/70%   1     2     2     2m54s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 60.5,
+      "phase": "under_load",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 393%/70%   1     2     2     2m57s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 63.9,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 376%/70%   1     2     2     3m1s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 68.2,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 376%/70%   1     2     2     3m5s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 72.4,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 376%/70%   1     2     2     3m9s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 76.9,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 376%/70%   1     2     2     3m14s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 81.9,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m18s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 86.1,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m23s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 90.3,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m27s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 94.6,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m32s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 98.9,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m36s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 103.1,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m40s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 107.3,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 171%/70%   1     2     2     3m44s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 111.5,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     2     3m49s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 115.9,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     2     3m53s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 120.1,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     2     3m57s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 124.8,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     2     4m1s",
+      "pod_count": 2
+    },
+    {
+      "elapsed_sec": 129.1,
+      "phase": "cooling_down",
+      "hpa": "inference-hpa   Deployment/inference-service   cpu: 1%/70%   1     2     2     4m6s",
+      "pod_count": 1
+    }
+  ]
+}

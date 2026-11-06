@@ -1,0 +1,43 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "pod_name": "inference-service-5c7c4ffbdf-gqhgr",
+      "cold_start_seconds": 6.34,
+      "download_log_evidence": [
+        "2026-11-06 15:22:18,133 [INFO] Preparing model from URI: s3://models/v1/model.tar.gz using S3 endpoint: http://seaweedfs.data.svc.cluster.local:8333",
+        "2026-11-06 15:22:18,308 [INFO] Downloading archive s3://models/v1/model.tar.gz...",
+        "2026-11-06 15:22:18,704 [INFO] Extracting archive...",
+        "2026-11-06 15:22:19,904 [INFO] Model v1 successfully loaded. Service is ready on port 8000!"
+      ]
+    },
+    {
+      "run": 2,
+      "pod_name": "inference-service-5c7c4ffbdf-7cgzm",
+      "cold_start_seconds": 7.13,
+      "download_log_evidence": [
+        "2026-11-06 15:22:34,812 [INFO] Preparing model from URI: s3://models/v1/model.tar.gz using S3 endpoint: http://seaweedfs.data.svc.cluster.local:8333",
+        "2026-11-06 15:22:35,005 [INFO] Downloading archive s3://models/v1/model.tar.gz...",
+        "2026-11-06 15:22:35,414 [INFO] Extracting archive...",
+        "2026-11-06 15:22:36,560 [INFO] Model v1 successfully loaded. Service is ready on port 8000!"
+      ]
+    },
+    {
+      "run": 3,
+      "pod_name": "inference-service-5c7c4ffbdf-jtnt9",
+      "cold_start_seconds": 8.01,
+      "download_log_evidence": [
+        "2026-11-06 15:22:53,893 [INFO] Preparing model from URI: s3://models/v1/model.tar.gz using S3 endpoint: http://seaweedfs.data.svc.cluster.local:8333",
+        "2026-11-06 15:22:54,062 [INFO] Downloading archive s3://models/v1/model.tar.gz...",
+        "2026-11-06 15:22:54,541 [INFO] Extracting archive...",
+        "2026-11-06 15:22:55,783 [INFO] Model v1 successfully loaded. Service is ready on port 8000!"
+      ]
+    }
+  ],
+  "cold_start_times_seconds": [
+    6.34,
+    7.13,
+    8.01
+  ],
+  "median_cold_start_seconds": 7.13
+}
