@@ -1,0 +1,10 @@
+.git
+.venv
+__pycache__
+*.pyc
+models
+datasets
+data/commands_pool.jsonl
+results/*.csv
+results/*.json
+results/*.jsonl

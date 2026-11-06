@@ -1,0 +1,22 @@
+{
+  "total_requests": 50,
+  "successful_requests": 46,
+  "failed_requests": 4,
+  "container_alive": true,
+  "oom_killed": false,
+  "peak_memory_mib": 348.1,
+  "peak_memory_raw": "348.1MiB / 1GiB",
+  "latency_ms": {
+    "p50": 2904.73,
+    "p95": 3692.98,
+    "avg": 2943.15
+  },
+  "total_duration_sec": 147.17,
+  "served_by_distribution": {
+    "b1eb0568da75": 50
+  },
+  "model_version_distribution": {
+    "v1": 50
+  },
+  "docker_stats_snapshot": "CONTAINER ID   NAME           CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O       PIDS\nb1eb0568da75   service-test   0.19%     347.1MiB / 1GiB     33.90%    124MB / 3.01MB   430kB / 254MB   25"
+}
