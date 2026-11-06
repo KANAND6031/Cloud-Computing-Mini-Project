@@ -1,3 +1,5 @@
+PYTHON ?= $(if $(wildcard .venv/Scripts/python.exe),.venv/Scripts/python.exe,$(if $(wildcard .venv/bin/python),.venv/bin/python,python))
+
 .PHONY: up down train test lint clean help
 
 help:
@@ -16,10 +18,10 @@ down:
 	k3d cluster delete cloud-assignment
 
 train:
-	python training/train.py $(if $(SUBSET),--subset $(SUBSET),)
+	$(PYTHON) training/train.py $(if $(SUBSET),--subset $(SUBSET),)
 
 test:
-	pytest tests/
+	$(PYTHON) -m pytest tests/
 
 lint:
 	ruff check .

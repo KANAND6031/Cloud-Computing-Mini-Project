@@ -24,6 +24,8 @@ metadata:
     app: seaweedfs
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: seaweedfs
@@ -40,7 +42,7 @@ spec:
             - "-s3"
             - "-dir=/data"
             - "-s3.port=8333"
-            - "-volume.max=10"
+            - "-volume.max=50"
           ports:
             - containerPort: 8333
               name: s3

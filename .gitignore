@@ -14,12 +14,16 @@ __pycache__/
 models/v1/*.safetensors
 models/v1/*.bin
 models/v1/*.pt
+models/v1/*.tar.gz
 models/v2/*.safetensors
 models/v2/*.bin
 models/v2/*.pt
+models/v2/*.tar.gz
 *.safetensors
 *.bin
 *.pt
+*.tar.gz
+test_upload.txt
 
 # OS files
 .DS_Store
