@@ -1,0 +1,26 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# Model weights and artifacts (stored in object storage / GitHub Release)
+models/v1/*.safetensors
+models/v1/*.bin
+models/v1/*.pt
+models/v2/*.safetensors
+models/v2/*.bin
+models/v2/*.pt
+*.safetensors
+*.bin
+*.pt
+
+# OS files
+.DS_Store
+Thumbs.db
