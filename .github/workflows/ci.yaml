@@ -63,7 +63,7 @@ jobs:
         run: |
           mkdir -p models/v1
           echo "Downloading model release asset from GitHub Release v1.0.0..."
-          gh release download v1.0.0 --repo ${{ github.repository }} --pattern "model.tar.gz" --pattern "model.sha256" --dir models/v1
+          gh release download v1.0.0 --repo ${{ github.repository }} --pattern "model.tar.gz" --pattern "model.sha256" --dir models/v1 --clobber
           cd models/v1
           echo "Verifying SHA-256 checksum..."
           sha256sum -c model.sha256
