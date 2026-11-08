@@ -50,8 +50,10 @@ jobs:
 
       # Stage 2: Unit tests (at least three)
       - name: Stage 2 - Unit Tests (pytest)
+        env:
+          PYTHONPATH: .
         run: |
-          pytest -v tests/test_unit.py
+          python -m pytest -v tests/test_unit.py
 
       # Stage 3: Model evaluation
       - name: Stage 3 - Download Model from GitHub Release
@@ -71,6 +73,8 @@ jobs:
           cd ../..
 
       - name: Stage 3 - Model Evaluation
+        env:
+          PYTHONPATH: .
         run: |
           mkdir -p results
           if [ "${{ github.event.inputs.test_bad_model }}" = "true" ]; then
@@ -84,5 +88,7 @@ jobs:
 
       # Stage 4: Quality Gate
       - name: Stage 4 - Quality Gate (score.py --min-validity 95)
+        env:
+          PYTHONPATH: .
         run: |
           python tools/score.py results/predictions.jsonl data/validation.jsonl --min-validity 95
