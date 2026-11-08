@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-11-08 22:20:55",
+  "run_time_seconds": 120.8,
+  "total_requests": 78,
+  "failed_requests": 1,
+  "error_rate_pct": 1.28,
+  "throughput_rps": 0.66,
+  "latency_ms": {
+    "p50_median": 5600.0,
+    "p95": 17000.0,
+    "avg": 5903.312496155148,
+    "min": 1376.6538000199944,
+    "max": 26767.73679998587
+  },
+  "pod_resources": {
+    "inference-service-5c7c4ffbdf-jtnt9": {
+      "avg_cpu_millicores": 729.0,
+      "peak_cpu_millicores": 996,
+      "avg_memory_mib": 367.1,
+      "peak_memory_mib": 375.0
+    },
+    "inference-service-5c7c4ffbdf-lpgth": {
+      "avg_cpu_millicores": 890.7,
+      "peak_cpu_millicores": 1004,
+      "avg_memory_mib": 361.3,
+      "peak_memory_mib": 375.0
+    }
+  },
+  "traffic_distribution": {
+    "per_replica": {
+      "inference-service-5c7c4ffbdf-jtnt9": 38,
+      "inference-service-5c7c4ffbdf-lpgth": 39
+    },
+    "per_model_version": {
+      "v1": 77
+    }
+  },
+  "cold_start_median_seconds": 7.13
+}
