@@ -1,5 +1,3 @@
-import os
-import sys
 import time
 import json
 import statistics
@@ -66,7 +64,7 @@ def run_single_cold_start(run_idx):
     # Retrieve logs showing model download
     time.sleep(1)
     logs = run_cmd(f"kubectl logs {pod_name} -n app -c inference")
-    download_log_lines = [l for l in logs.splitlines() if any(kw in l for kw in ["Preparing model", "Downloading archive", "Extracting archive", "successfully loaded"])]
+    download_log_lines = [line for line in logs.splitlines() if any(kw in line for kw in ["Preparing model", "Downloading archive", "Extracting archive", "successfully loaded"])]
 
     return {
         "run": run_idx,

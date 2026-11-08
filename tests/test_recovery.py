@@ -18,15 +18,15 @@ def run_cmd(cmd):
 
 def get_ready_pods():
     out = run_cmd("kubectl get pods -n app -l app=inference-service --no-headers")
-    lines = [l for l in out.splitlines() if l.strip()]
+    lines = [line for line in out.splitlines() if line.strip()]
     ready_pods = []
-    for l in lines:
-        parts = l.split()
+    for line in lines:
+        parts = line.split()
         if len(parts) >= 3:
             name = parts[0]
             ready_str = parts[1]
             status = parts[2]
-            ready_pods.append({"name": name, "ready": ready_str, "status": status, "raw": l})
+            ready_pods.append({"name": name, "ready": ready_str, "status": status, "raw": line})
     return ready_pods
 
 

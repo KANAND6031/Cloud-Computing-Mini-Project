@@ -1,7 +1,6 @@
 import os
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
-import sys
 import time
 import json
 import urllib.request
@@ -24,7 +23,6 @@ def evaluate_teacher(val_path="data/validation.jsonl",
     os.makedirs(os.path.dirname(out_pred_path) or ".", exist_ok=True)
     generate_url = f"{ollama_url.rstrip('/')}/api/generate"
 
-    preds = []
     with open(out_pred_path, "w", encoding="utf-8") as out_f:
         for i, rec in enumerate(val_records, 1):
             vid = rec["id"]

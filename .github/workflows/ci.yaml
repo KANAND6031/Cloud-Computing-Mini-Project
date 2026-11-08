@@ -1,0 +1,88 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+  workflow_dispatch:
+    inputs:
+      test_bad_model:
+        description: 'Run quality gate with deliberately bad model to demonstrate gate failure'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  ci-pipeline:
+    name: Build, Lint, Test, Evaluate & Quality Gate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Secret Scanning (Gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff pytest torch transformers accelerate sentencepiece
+          pip install --upgrade --force-reinstall torch --index-url https://download.pytorch.org/whl/cpu
+
+      # Stage 1: Linting
+      - name: Stage 1 - Linting (ruff)
+        run: |
+          ruff check .
+
+      # Stage 2: Unit tests (at least three)
+      - name: Stage 2 - Unit Tests (pytest)
+        run: |
+          pytest -v tests/test_unit.py
+
+      # Stage 3: Model evaluation
+      - name: Stage 3 - Download Model from GitHub Release
+        if: ${{ github.event.inputs.test_bad_model != 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p models/v1
+          echo "Downloading model release asset from GitHub Release v1.0.0..."
+          gh release download v1.0.0 --repo ${{ github.repository }} --pattern "model.tar.gz" --pattern "model.sha256" --dir models/v1
+          cd models/v1
+          echo "Verifying SHA-256 checksum..."
+          sha256sum -c model.sha256
+          echo "Extracting model archive..."
+          tar -xzf model.tar.gz
+          ls -la
+          cd ../..
+
+      - name: Stage 3 - Model Evaluation
+        run: |
+          mkdir -p results
+          if [ "${{ github.event.inputs.test_bad_model }}" = "true" ]; then
+            echo "Evaluating DELIBERATELY BAD MODEL..."
+            python training/evaluate_ci.py --bad-model --out results/predictions.jsonl
+          else
+            echo "Evaluating fine-tuned student model..."
+            python training/evaluate_ci.py --model models/v1 --out results/predictions.jsonl
+          fi
+          python tools/score.py results/predictions.jsonl data/validation.jsonl --out results/ci_evaluation_report.json
+
+      # Stage 4: Quality Gate
+      - name: Stage 4 - Quality Gate (score.py --min-validity 95)
+        run: |
+          python tools/score.py results/predictions.jsonl data/validation.jsonl --min-validity 95

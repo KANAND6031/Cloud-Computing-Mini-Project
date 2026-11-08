@@ -98,16 +98,15 @@ def main():
         t0 = time.time()
         status_code = None
         headers = {}
-        resp_body = None
         try:
             with urllib.request.urlopen(req, timeout=15) as resp:
                 status_code = resp.status
                 headers = dict(resp.headers)
-                resp_body = resp.read().decode("utf-8")
+                _ = resp.read().decode("utf-8")
         except urllib.error.HTTPError as e:
             status_code = e.code
             headers = dict(e.headers)
-            resp_body = e.read().decode("utf-8")
+            _ = e.read()
         except Exception as e:
             print(f"  Request #{idx} ERROR: {e}")
             continue

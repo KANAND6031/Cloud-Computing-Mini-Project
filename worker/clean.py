@@ -165,7 +165,7 @@ def clean_data(shards_pattern="worker/shards/shard-*.jsonl",
                 aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY", "any"),
                 region_name="us-east-1"
             )
-            print(f"Uploading cleaned dataset to s3://datasets/v1/train.jsonl...")
+            print("Uploading cleaned dataset to s3://datasets/v1/train.jsonl...")
             s3.upload_file(out_path, "datasets", "v1/train.jsonl")
             s3.upload_file(checksum_path, "datasets", "v1/train.sha256")
             print("Successfully uploaded train.jsonl and train.sha256 to SeaweedFS S3.")

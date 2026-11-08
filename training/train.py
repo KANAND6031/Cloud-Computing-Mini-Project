@@ -1,7 +1,6 @@
 import os
 os.environ["HF_HUB_OFFLINE"] = "1"
 os.environ["TRANSFORMERS_OFFLINE"] = "1"
-import sys
 import time
 import json
 import yaml
@@ -105,7 +104,7 @@ def train_model(config_path="training/config.yaml",
     max_seq_length = int(config.get("max_seq_length", 128))
 
     print("=" * 60)
-    print(f"TRAINING PYTHIA-70M (Sequence-Level Distillation)")
+    print("TRAINING PYTHIA-70M (Sequence-Level Distillation)")
     print(f"Config: seed={seed}, lr={learning_rate}, batch_size={batch_size}, epochs={epochs}, max_seq_length={max_seq_length}")
     print(f"Output directory: {output_dir}")
     print("=" * 60)
@@ -184,8 +183,8 @@ def train_model(config_path="training/config.yaml",
     os.makedirs(os.path.dirname(loss_csv) or ".", exist_ok=True)
     with open(loss_csv, "w", encoding="utf-8") as f:
         f.write("epoch,loss\n")
-        for ep, l in epoch_losses:
-            f.write(f"{ep},{l:.4f}\n")
+        for ep, loss_val in epoch_losses:
+            f.write(f"{ep},{loss_val:.4f}\n")
     print(f"Saved training loss to {loss_csv}", flush=True)
 
     # 5. Save model and tokenizer

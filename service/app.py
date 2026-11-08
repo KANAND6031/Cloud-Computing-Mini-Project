@@ -1,5 +1,4 @@
 import os
-import sys
 import json
 import socket
 import logging
@@ -8,7 +7,7 @@ import threading
 from contextlib import asynccontextmanager
 from typing import Optional, Dict, Any
 
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import jsonschema
