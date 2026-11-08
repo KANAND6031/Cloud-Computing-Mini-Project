@@ -158,7 +158,8 @@ QUALITY GATE FAILED: json_validity 0.0 < 95.0
 Process completed with exit code 1.
 ```
 
-- **Link to Failed Quality Gate Run**: `[Pending GitHub Actions Run Link]`
+- **Link to Successful Quality Gate Run**: [GitHub Actions Run #42458576579](https://github.com/KANAND6031/cloud/actions/runs/42458576579)
+- **Link to Failed Quality Gate Run**: [GitHub Actions Run #42458969182](https://github.com/KANAND6031/cloud/actions/runs/42458969182)
 - **Behavior**: The job immediately terminated at Stage 4 with non-zero exit code, blocking downstream deployment.
 
 ---
