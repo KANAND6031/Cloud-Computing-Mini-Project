@@ -106,7 +106,7 @@ tests/test_unit.py::test_subnet_vlsm_math PASSED                         [100%]
 ## 4. Release Asset & Model Evaluation Stage
 
 The distilled student model (`models/v1/`) is published as a GitHub Release asset:
-- **Release Tag**: `v1.0.0` (`https://github.com/KANAND6031/cloud/releases/tag/v1.0.0`)
+- **Release Tag**: `v1.0.0` (`https://github.com/KANAND6031/Cloud-Computing-Mini-Project/releases/tag/v1.0.0`)
 - **Published Asset**: `model.tar.gz`
 - **SHA-256 Checksum**: `dbc2a82188fff0df1ca8c8ab67cbfb9f5c79258e48036861978438260b80bae6` (recorded in `models/v1/model.sha256`).
 
@@ -158,8 +158,8 @@ QUALITY GATE FAILED: json_validity 0.0 < 95.0
 Process completed with exit code 1.
 ```
 
-- **Link to Successful Quality Gate Run**: [GitHub Actions Run #42458576579](https://github.com/KANAND6031/cloud/actions/runs/42458576579)
-- **Link to Failed Quality Gate Run**: [GitHub Actions Run #42458969182](https://github.com/KANAND6031/cloud/actions/runs/42458969182)
+- **Link to Successful Quality Gate Run**: [GitHub Actions Run #42458576579](https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/runs/42458576579)
+- **Link to Failed Quality Gate Run**: [GitHub Actions Run #42458969182](https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/runs/42458969182)
 - **Behavior**: The job immediately terminated at Stage 4 with non-zero exit code, blocking downstream deployment.
 
 ---

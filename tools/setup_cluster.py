@@ -35,7 +35,7 @@ def setup_system():
     if not os.path.exists(model_tar):
         os.makedirs("models/v1", exist_ok=True)
         print("Model weights not present locally; downloading release asset v1.0.0...")
-        url = "https://github.com/KANAND6031/cloud/releases/download/v1.0.0/model.tar.gz"
+        url = "https://github.com/KANAND6031/Cloud-Computing-Mini-Project/releases/download/v1.0.0/model.tar.gz"
         try:
             urllib.request.urlretrieve(url, model_tar)
             print("Successfully downloaded model.tar.gz")

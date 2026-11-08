@@ -1,8 +1,10 @@
 # Cloud Computing (CS3081): Mini Project
 ## Knowledge Distillation and Deployment of a Lightweight Command-Parsing Language Model on a Local Cloud
 
-[![CI/CD Pipeline](https://github.com/KANAND6031/cloud/actions/workflows/ci.yaml/badge.svg)](https://github.com/KANAND6031/cloud/actions/workflows/ci.yaml)
-[![Release](https://img.shields.io/github/v/release/KANAND6031/cloud)](https://github.com/KANAND6031/cloud/releases/tag/v1.0.0)
+[![CI/CD Pipeline](https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/workflows/ci.yaml/badge.svg)](https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/workflows/ci.yaml)
+[![Release](https://img.shields.io/github/v/release/KANAND6031/Cloud-Computing-Mini-Project)](https://github.com/KANAND6031/Cloud-Computing-Mini-Project/releases/tag/v1.0.0)
+
+**GitHub Repository**: [https://github.com/KANAND6031/Cloud-Computing-Mini-Project](https://github.com/KANAND6031/Cloud-Computing-Mini-Project)
 
 This repository contains the complete implementation, infrastructure configurations, training pipelines, and CI/CD automation for distilling a 3.8B parameter teacher model (`Phi-3.5-mini-instruct`) into a 70M parameter lightweight student model (`EleutherAI/pythia-70m`), containerizing it as a microservice, and deploying it with autoscaling and health probes to a local Kubernetes (`k3d`) cloud environment.
 
@@ -179,5 +181,5 @@ Readiness probe endpoint returning `HTTP 503 Service Unavailable` while weights 
 ## 5. Model Artifacts and GitHub Releases
 
 Model weights are decoupled from the repository and published as release assets per project constraints:
-- **Release Asset**: [`model.tar.gz`](https://github.com/KANAND6031/cloud/releases/tag/v1.0.0)
+- **Release Asset**: [`model.tar.gz`](https://github.com/KANAND6031/Cloud-Computing-Mini-Project/releases/tag/v1.0.0)
 - **SHA-256 Checksum**: `dbc2a82188fff0df1ca8c8ab67cbfb9f5c79258e48036861978438260b80bae6` (recorded in `models/v1/model.sha256`)

@@ -154,7 +154,7 @@ def build_pages():
       <h1>Cloud Computing (CS3081): Mini Project Final Report</h1>
       <div class="header-meta">
         <span><strong>Topic:</strong> Knowledge Distillation and Microservice Deployment on a Local Cloud</span>
-        <span><strong>Repository:</strong> https://github.com/KANAND6031/cloud</span>
+        <span><strong>Repository:</strong> https://github.com/KANAND6031/Cloud-Computing-Mini-Project</span>
       </div>
     </div>
 
@@ -496,13 +496,13 @@ OOM Event:          NO (Exit code 0)
 
     <h3>3.1 Successful Pipeline Execution (Fine-Tuned Student Model)</h3>
     <ul>
-      <li><strong>GitHub Actions Run Link</strong>: <a href="https://github.com/KANAND6031/cloud/actions/runs/42458576579">https://github.com/KANAND6031/cloud/actions/runs/42458576579</a></li>
+      <li><strong>GitHub Actions Run Link</strong>: <a href="https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/runs/42458576579">https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/runs/42458576579</a></li>
       <li><strong>Result</strong>: All stages passed in 2m 39s. Distilled model achieved <strong>98.0% JSON validity</strong>, clearing the 95% threshold.</li>
     </ul>
 
     <h3>3.2 Deliberately Failing Run (Untrained Baseline Model)</h3>
     <ul>
-      <li><strong>GitHub Actions Run Link</strong>: <a href="https://github.com/KANAND6031/cloud/actions/runs/42458969182">https://github.com/KANAND6031/cloud/actions/runs/42458969182</a></li>
+      <li><strong>GitHub Actions Run Link</strong>: <a href="https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/runs/42458969182">https://github.com/KANAND6031/Cloud-Computing-Mini-Project/actions/runs/42458969182</a></li>
       <li><strong>Execution</strong>: Triggered via <code>workflow_dispatch</code> with <code>test_bad_model=true</code>.</li>
       <li><strong>Failure Output</strong>:
         <pre>QUALITY GATE FAILED: json_validity 0.0 < 95.0
